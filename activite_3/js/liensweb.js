@@ -85,10 +85,9 @@ bouton.addEventListener("click", function (e) {
                 url: newUrl,
                 auteur: newAuteur
             };
-            var ObjetToSend = JSON.stringify(nouvelObjet);
-            console.log(ObjetToSend);
+            console.log(nouvelObjet);
             // ajaxPost pour envoyer nouvelElt vers l'API lors du click sur "ajouter"
-            ajaxPost("https://oc-jswebsrv.herokuapp.com/api/lien", ObjetToSend, function (succes) {}, true);
+            ajaxPost("https://oc-jswebsrv.herokuapp.com/api/lien", nouvelObjet, function () {}, true);
             // Utiliser la fonction sur le nouvel objet
             var nouvelElt = creerElementLien(nouvelObjet);
             // Ajouter en tête de liste
